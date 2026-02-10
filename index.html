@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Keluarga</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+}
+.logo{
+  color:#e50914;
+  font-size:24px;
+  font-weight:bold;
+}
+.profile{
+  width:35px;
+  height:35px;
+  border-radius:5px;
+  background:#555;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(to top,#000,rgba(0,0,0,0.3)),
+  url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4") center/cover;
+  height:60vh;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.hero h1{
+  font-size:28px;
+  margin-bottom:10px;
+}
+.hero p{
+  font-size:14px;
+  max-width:300px;
+}
+.hero button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  background:#e50914;
+  color:#fff;
+  font-size:14px;
+  border-radius:4px;
+}
+
+/* SECTION */
+.section{
+  padding:15px;
+}
+.section h2{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+/* ROW */
+.row{
+  display:flex;
+  overflow-x:auto;
+  gap:10px;
+}
+.card{
+  min-width:120px;
+  height:170px;
+  background:#222;
+  border-radius:5px;
+  animation:pop 1s infinite alternate;
+}
+@keyframes pop{
+  from{transform:scale(1);}
+  to{transform:scale(1.05);}
+}
+
+/* BOTTOM NAV */
+nav{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#111;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+nav span{
+  font-size:12px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NETFLIX</div>
+  <div class="profile"></div>
+</header>
+
+<div class="hero">
+  <h1>Film Keluarga Terpopuler</h1>
+  <p>Nikmati tontonan keluarga terbaik dengan tampilan premium.</p>
+  <button onclick="playFake()">▶ Putar</button>
+</div>
+
+<div class="section">
+  <h2>Untuk Keluarga</h2>
+  <div class="row">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Film Anak</h2>
+  <div class="row">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+</div>
+
+<nav>
+  <span>Beranda</span>
+  <span>Cari</span>
+  <span>Favorit</span>
+  <span>Profil</span>
+</nav>
+
+<script>
+function playFake(){
+  alert("▶ Memutar...\n(Simulasi saja, tidak ada video asli)");
+}
+</script>
+
+</body>
+</html>
